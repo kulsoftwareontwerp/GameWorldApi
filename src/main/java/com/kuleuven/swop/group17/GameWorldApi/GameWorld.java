@@ -32,7 +32,7 @@ public interface GameWorld {
 	 *                                       the corresponding gameWorldType of this
 	 *                                       gameWorld.
 	 */
-	public void evaluate(Predicate predicate) throws UnsupportedOperationException;
+	public Boolean evaluate(Predicate predicate) throws UnsupportedOperationException;
 
 	/**
 	 * Saves the current state of the gameWorld.
