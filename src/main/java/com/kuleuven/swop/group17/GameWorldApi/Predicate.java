@@ -11,8 +11,11 @@ public interface Predicate {
 
 	
 	/**
-	 * Retrieve the name associated with a predicate.
-	 * @return the name associated with a predicate.
+	 * Retrieve the String representation associated with a predicate.
+	 * @return the string representation associated with a predicate.
 	 */
-	public String getName();
+	public String toString();
+	
+	
+	
 }

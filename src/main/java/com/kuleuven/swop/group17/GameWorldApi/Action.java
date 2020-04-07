@@ -9,9 +9,9 @@ package com.kuleuven.swop.group17.GameWorldApi;
 public interface Action {
 	
 	/**
-	 * Retrieve the name associated with an action.
-	 * @return the name associated with an action.
+	 * Retrieve the String representation associated with an action.
+	 * @return the string representation associated with an action.
 	 */
-	public String getName();
+	public String toString();
 	
 }
