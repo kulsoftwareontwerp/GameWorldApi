@@ -31,6 +31,7 @@ public interface GameWorld {
 	 *                                       listed in the supportedPredicates of
 	 *                                       the corresponding gameWorldType of this
 	 *                                       gameWorld.
+	 * @return the evaluation of the given predicate.
 	 */
 	public Boolean evaluate(Predicate predicate) throws UnsupportedOperationException;
 
