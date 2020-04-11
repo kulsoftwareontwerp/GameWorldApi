@@ -20,8 +20,12 @@ public interface GameWorld {
 	 *                                       listed in the supportedActions of the
 	 *                                       corresponding gameWorldType of this
 	 *                                       gameWorld.
+	 * @throws NullPointerException          when the given action is null.
+	 * @throws RuntimeException              when something went wrong in the
+	 *                                       evaluation of the predicate.
 	 */
-	public void performAction(Action action) throws UnsupportedOperationException;
+	public void performAction(Action action)
+			throws UnsupportedOperationException, NullPointerException, RuntimeException;
 
 	/**
 	 * Evaluates the given predicate on the gameWorld.
@@ -31,9 +35,13 @@ public interface GameWorld {
 	 *                                       listed in the supportedPredicates of
 	 *                                       the corresponding gameWorldType of this
 	 *                                       gameWorld.
+	 * @throws NullPointerException          when the given predicate is null.
+	 * @throws RuntimeException              when something went wrong in the
+	 *                                       evaluation of the predicate.
 	 * @return the evaluation of the given predicate.
 	 */
-	public Boolean evaluate(Predicate predicate) throws UnsupportedOperationException;
+	public Boolean evaluate(Predicate predicate)
+			throws UnsupportedOperationException, NullPointerException, RuntimeException;
 
 	/**
 	 * Saves the current state of the gameWorld.
@@ -48,6 +56,7 @@ public interface GameWorld {
 	 * @param state the state to which the gameWorld should be set.
 	 * @throws IllegalArgumentException when the given state is not a state of this
 	 *                                  gameWorld.
+	 * @throws NullPointerException     when the given GameWorlSnapshot is null.
 	 */
 	public void restoreState(GameWorldSnapshot state) throws IllegalArgumentException;
 
@@ -55,8 +64,10 @@ public interface GameWorld {
 	 * Paint the gameWorld on the given graphics object.
 	 * 
 	 * @param graphics the graphics object on which the gameWorld should be painted.
+	 * @throws NullPointerException when the given graphics object is null.
+	 * @throws RuntimeException     when something went wrong during painting
 	 */
-	public void paint(Graphics graphics);
+	public void paint(Graphics graphics) throws NullPointerException, RuntimeException;
 
 	/**
 	 * Retrieve the gameWorldType associated with this gameWorld.
