@@ -5,7 +5,7 @@
 
 	<groupId>com.kuleuven.swop.group17</groupId>
 	<artifactId>GameWorldApi</artifactId>
-	<version>0.6.0</version>
+	<version>0.6.1</version>
 	<packaging>jar</packaging>
 
 	<name>GameWorldApi</name>
