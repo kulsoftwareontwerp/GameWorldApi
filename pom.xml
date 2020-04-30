@@ -46,7 +46,7 @@
 		<repository>
 			<id>github</id>
 			<name>GameWorld API</name>
-			<url>https://maven.pkg.github.com/ArneLibbrecht/GameWorldApi</url>
+			<url>https://maven.pkg.github.com/kulsoftwareontwerp/GameWorldApi</url>
 		</repository>
 	</distributionManagement>
 </project>
